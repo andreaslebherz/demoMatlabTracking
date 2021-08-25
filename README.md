@@ -5,7 +5,7 @@ https://de.mathworks.com/help/driving/ug/extended-object-tracking.html
 
 It therefore requires the 'Automated Driving Toolbox' and the 'Sensor Fusion and Tracking Toolbox'. This demo was developed under MatLab version R2021a.
 
-The sensor configuration consists of 5R1C and is implemented scenario independent. 
+The sensor configuration consists of 5R1C and is implemented scenario independent. The tracker does not differ between moving and static objects and leads to faulty results when used with scenarios that contain barriers/guardrails. 
 
 Scenario files should be placed in the /scenario folder. 
 
