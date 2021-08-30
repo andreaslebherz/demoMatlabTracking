@@ -170,8 +170,6 @@ seed = 2021;
 S = rng(seed);
 
 if EVAL_JPDA
-    timeStep = 1;
-    
     % Create a multiObjectTracker
     tracker = trackerJPDA(...
         'FilterInitializationFcn', @helperInitPointFilter, ...

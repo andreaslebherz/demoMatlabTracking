@@ -101,19 +101,8 @@ function BEP = createBEPPanel(obj, hFigure, position, frontBackLim, sensors, tit
     % Create a track plotter
     trackPlotter(BEP, 'DisplayName','track', 'HistoryDepth',10);
   
-    % Add an outline plotter for the track outlines of Rectangular targets
-    p = trackOutlinePlotter(BEP, 'Tag', 'Track Outlines','FaceAlpha',0);
-    p.LineStyle = ':';
-    
     % Add an outline plotter for ground truth
     outlinePlotter(BEP, 'Tag', 'Ground truth');
-    
-    % Add a plotter for extent for plotting track outlines of Elliptical
-    % targets
-    trackPlotter(BEP, 'Tag', 'Track Extent');
-    s = findall(BEP.Parent,'Tag','bepTracksCovariances');
-    s.LineStyle = ':';
-    s.LineWidth = 2;
     
     numRadar = sum(cellfun(@(s) isa(s, 'drivingRadarDataGenerator'), sensors, 'UniformOutput', true));
     
